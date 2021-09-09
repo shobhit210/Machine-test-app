@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register(){
+  validate(){
     if (this.registerForm.valid){
       this.router.navigateByUrl("display")
     } else {
