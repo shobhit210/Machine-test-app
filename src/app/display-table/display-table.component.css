@@ -1,0 +1,24 @@
+.body{
+    background-image: url("back2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.table-bg{
+    background-color: rgb(255, 255, 255);
+}
+
+.b-text{
+    border-radius: 5px;
+}
+
+.footer{
+    width:100vw;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    font-weight: bold;
+}
