@@ -4,21 +4,23 @@
             <div class="col-sm-0 col-md-2 col-lg-4"></div>
             <div class="col-sm-12 col-md-8 col-lg-4 form-body">
 
-                <form>
+                <form [formGroup]="registerForm" (ngsubmit)="register()">
                     <h4 class="text-center mt-4 mb-4 green-text">Enter Your Details</h4>
 
                     <label for="fname" class="green-text">First Name:</label>
-                    <input type="text" name="fname" id="fname" class="form-control mb-3 green-border">
+                    <input type="text" name="fname" id="fname" class="form-control mb-3 green-border" formControlName="fname"><br>
+                    <div *ngIf="(this.registerForm.get('fname')?.touched || this.register.get('fname')?.dirty) && this.registerForm.get('fname')?.errors" class="errors">Invalid First Name</div>
 
                     <label for="email" class="green-text">Email:</label>
-                    <input type="email" name="email" id="email" class="form-control mb-3 green-border">
+                    <input type="email" name="email" id="email" class="form-control mb-3 green-border" formControlName="email"><br>
+                    <div *ngIf="(this.registerForm.get('email')?.touched || this.register.get('email')?.dirty) && this.registerForm.get('email')?.errors" class="errors">Invalid Email Address</div>
 
                     <label for="num" class="green-text">Phone Number:</label>
-                    <input type="text" name="num" id="num" class="form-control mb-3 green-border">
+                    <input type="text" name="num" id="num" class="form-control mb-3 green-border" formControlName="num">
+                    <div *ngIf="(this.registerForm.get('num')?.touched || this.register.get('num')?.dirty) && this.registerForm.get('num')?.errors" class="errors">Invalid Phone Number</div>
 
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-outline-success mt-3 mb-4 m-2" routerLink="display">Submit</button>
-                        <button type="button" class="btn btn-outline-success mt-3 mb-4 m-2">Reset</button>
+                        <button type="submit" value="Submit" class="btn btn-outline-success mt-3 mb-4 m-2">Submit</button>
                     </div>
                 </form>
             </div>
