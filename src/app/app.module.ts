@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { DisplayTableComponent } from './display-table/display-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DisplayTwoComponent } from './display-two/display-two.component';
+import { DisplayThreeComponent } from './display-three/display-three.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    DisplayTableComponent
+    DisplayTableComponent,
+    DisplayTwoComponent,
+    DisplayThreeComponent
   ],
   imports: [
     BrowserModule,
